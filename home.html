@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Bank software in js</title>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main class="flex justify-center mt-5">
+    <div class="mockup-phone border-primary">
+      <div class="camera"></div>
+      <div class="display">
+        <div class="artboard artboard-demo phone-2">
+          <!-- balance section start -->
+         <section class="flex justify-center">
+          <div class="stats shadow">
+            <div class="stat">
+              <div id="currentBalance" class="stat-value">100</div>
+              <div class="stat-desc">Available Balance</div>
+            </div>
+            <div class="text-bold p-2">
+              <button class="btn btn-outline btn-accent mt-2 btn btn-warning"><a href="../index.html">Logout</a></button>
+            </div>
+          </div>
+         </section>
+          <div class="divider"></div>
+           <!-- balance section end -->
+            <!-- user action button -->
+             <div class="flex">
+              <button id="show-addMoney" class="btn btn-sm mr-3">Add Money</button>
+              <button id="show-CashOut" class="btn btn-sm">Cash Out</button>
+              <button id="txn-button" class="btn btn-sm ml-3">Transaction</button>
+             </div>
+             <!-- add money form -->
+             <div id="addMoney-form" class="card bg-base-100 w-[90%] max-w-sm shrink-0 shadow-2xl mt-5">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Add Amount</span>
+                  </label>
+                  <input id="addAmount" type="text" placeholder="Enter Your Amount" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">4 Digit Pin</span>
+                  </label>
+                  <input id="addPin" type="password" placeholder="Enter 4 digit Pin" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id='addMoney-btn' class="btn btn-primary">Add Money</button>
+                </div>
+              </form>
+            </div>
+            <!-- form end -->
+             <!-- cash out form start -->
+             <div id="cashOut-form" class="hidden card bg-base-100 w-[90%] max-w-sm shrink-0 shadow-2xl mt-5">
+              <form class="card-body">
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Withdrawal Amount</span>
+                  </label>
+                  <input id="cashOut-amount" type="text" placeholder="Enter Your Amount" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">4 Digit Pin</span>
+                  </label>
+                  <input id="cashOut-pinNumber" type="password" placeholder="Enter 4 digit Pin" class="input input-bordered" autocomplete="off" required />
+                </div>
+                <div class="form-control mt-6">
+                  <button id="cashOut-btn" class="btn btn-warning">Cash Out</button>
+                </div>
+              </form>
+            </div>
+             <!-- cash out form end -->
+              <!-- transaction details start -->
+              <div id="show-txn-history" class=" hidden mt-4">
+                <h4 class="text-center">Transaction History</h4>
+                <div id="txn-container">
+                  
+                </div>
+              </div>
+              <!-- transaction details end -->
+        </div>
+      </div>
+    </div> 
+  </main>
+  <footer>
+
+  </footer>
+
+  <script src="./js/login.js"></script>
+  <script src="./js/function.js"></script>
+  <script src="./js/addmoney.js"></script>
+  <script src="./js/fetures.js"></script>
+  <script src="./js/cashout.js"></script>
+
+
+</body>
+</html>
