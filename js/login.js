@@ -7,7 +7,7 @@ document.getElementById('btn-login').addEventListener('click',function(e){
   if(mobile === 9433850240 && password === 1234){
   
     alert('Login Successfully..');
-    window.location.href = ('../home.html');
+    window.location.href = ('/payoomdf-function/home.html');
 
 
   }else{
